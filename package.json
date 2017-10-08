@@ -1,6 +1,7 @@
 {
   "name": "d3-word-wrap",
   "version": "0.0.1",
+  "author": "Mike Winter <github@michael-winter.me.uk>",
   "description": "Provides word wrapping for text elements drawn with d3.",
   "keywords": [
     "d3",
@@ -8,17 +9,20 @@
     "d3-word-wrap",
     "word wrapping"
   ],
-  "license": "MIT License",
+  "license": "MIT",
   "main": "build/d3-word-wrap.js",
   "jsnext:main": "index",
-  "homepage": "https://github.com/MikeWinter/d3-word-wrap",
+  "homepage": "https://github.com/MikeWinter/d3-word-wrap#readme",
   "repository": {
     "type": "git",
     "url": "https://github.com/MikeWinter/d3-word-wrap.git"
   },
+  "bugs": {
+    "url": "https://github.com/MikeWinter/d3-word-wrap/issues"
+  },
   "scripts": {
     "pretest": "rm -rf build && mkdir build && rollup -f umd -n d3 -o build/d3-word-wrap.js -- index.js",
-    "test": "tape **/*.test.js",
+    "test": "tape '**/*.test.js'",
     "prepublish": "npm run test && uglifyjs build/d3-word-wrap.js -c -m -o build/d3-word-wrap.min.js",
     "postpublish": "zip -j build/d3-word-wrap.zip -- LICENSE README.md build/d3-wrap.js build/d3-word-wrap.min.js"
   },
