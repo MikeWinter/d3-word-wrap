@@ -8,13 +8,13 @@ export default function(width, height) {
   wrap.width = function(width) {
     return (arguments.length === 0)
             ? _width
-            : (_width = width, this);
+            : (_width = width, wrap);
   };
 
   wrap.height = function(height) {
     return (arguments.length === 0)
             ? _height
-            : (_height = height, this);
+            : (_height = height, wrap);
   };
 
   return wrap;
