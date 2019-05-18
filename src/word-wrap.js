@@ -3,6 +3,14 @@ export default function(width, height) {
       _width = width || 0;
 
   function wrap(selection) {
+    let firstNode = selection.nodes()[0];
+    for (let p in firstNode) {
+      console.log(p + ': ' + firstNode[p]);
+    }
+    // console.log('computed: ' + selection.nodes()[0].getComputedTextLength);
+    // getClientRects
+    // getBoundingClientRect
+    console.log(firstNode);
   }
 
   wrap.width = function(width) {
